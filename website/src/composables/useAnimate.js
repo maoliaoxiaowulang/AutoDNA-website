@@ -155,4 +155,49 @@ export const vChartBar = {
   },
 }
 
+/**
+ * Directive: staggered entrance + looping flow for service pipeline
+ */
+export const vPipelineAnimate = {
+  mounted(el) {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add('service-pipeline--animate')
+          observer.unobserve(el)
+        }
+      },
+      { threshold: 0.2, rootMargin: '0px 0px -40px 0px' }
+    )
+    observer.observe(el)
+    el._pipelineObserver = observer
+  },
+  unmounted(el) {
+    if (el._pipelineObserver) el._pipelineObserver.disconnect()
+  },
+}
+
+/**
+ * Directive: stagger children entrance when container enters viewport
+ */
+export const vStagger = {
+  mounted(el) {
+    el.classList.add('stagger-group')
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add('stagger-group--visible')
+          observer.unobserve(el)
+        }
+      },
+      { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+    )
+    observer.observe(el)
+    el._staggerObserver = observer
+  },
+  unmounted(el) {
+    if (el._staggerObserver) el._staggerObserver.disconnect()
+  },
+}
+
 export default vObserve
