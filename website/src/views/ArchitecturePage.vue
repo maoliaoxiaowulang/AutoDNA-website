@@ -30,7 +30,7 @@
   </section>
 
   <!-- Agent Architecture Diagram -->
-  <section class="section section--alt">
+  <section class="section">
     <div class="container">
       <div v-observe style="text-align:center;margin-bottom:3rem;">
         <span class="section-label">Agent Architecture</span>
