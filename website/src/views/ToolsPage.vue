@@ -4,7 +4,7 @@
       <span class="section-label">Tools</span>
       <h1>Tools & Resources</h1>
       <p class="section-subtitle" style="margin:0 auto;">
-        Molecular visualization utilities for oxDNA simulations, running entirely in your browser.
+        A growing collection of tools and utilities to support experimental design, simulation analysis, and data visualization — accessible directly in your browser.
       </p>
     </div>
   </header>
