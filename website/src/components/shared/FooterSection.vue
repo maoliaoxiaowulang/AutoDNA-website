@@ -12,8 +12,7 @@
             <li><router-link to="/">Home</router-link></li>
             <li><router-link to="/architecture">Architecture</router-link></li>
             <li><router-link to="/applications">Applications</router-link></li>
-            <li><router-link to="/research">Research</router-link></li>
-            <li><router-link to="/publication">Publication</router-link></li>
+            <li><router-link to="/tools">Tools</router-link></li>
           </ul>
         </div>
         <div>

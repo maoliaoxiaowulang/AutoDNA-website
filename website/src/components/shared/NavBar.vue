@@ -31,8 +31,7 @@ const links = [
   { to: '/', label: 'Home' },
   { to: '/architecture', label: 'Architecture' },
   { to: '/applications', label: 'Applications' },
-  { to: '/research', label: 'Research' },
-  { to: '/publication', label: 'Publication' },
+  { to: '/tools', label: 'Tools' },
 ]
 
 function closeMenu() { menuOpen.value = false }

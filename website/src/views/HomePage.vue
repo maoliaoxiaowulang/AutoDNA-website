@@ -30,13 +30,8 @@
         </div>
         <div class="card stat-simple">
           <div class="stat-icon">⚙️</div>
-          <div class="stat-value" v-count-up="{ target: 9365, comma: true }">0</div>
+          <div class="stat-value" v-count-up="{ target: 11386, comma: true }">0</div>
           <div class="card__text">Autonomous<br>Hardware Steps</div>
-        </div>
-        <div class="card stat-simple">
-          <div class="stat-icon">🧬</div>
-          <div class="stat-value" v-count-up="{ target: 97.7, suffix: '%', decimals: 1 }">0%</div>
-          <div class="card__text">Step-Wise<br>Synthesis Yield</div>
         </div>
       </div>
     </div>
@@ -75,36 +70,29 @@
     </div>
   </section>
 
-  <!-- System at a Glance -->
+  <!-- News -->
   <section class="section">
     <div class="container">
       <div v-observe style="text-align:center;margin-bottom:3rem;">
-        <span class="section-label">System Overview</span>
-        <h2 class="section-title">Four Layers, Full Autonomy</h2>
+        <span class="section-label">News</span>
+        <h2 class="section-title">Latest Updates</h2>
       </div>
       <div v-observe>
-        <div class="arch-layer" style="border-color:var(--color-primary);background:rgba(66,133,244,0.03);">
-          <div style="font-weight:600;font-size:1.125rem;">🎨 UI Layer</div>
-          <div class="tag tag--blue" style="margin-top:0.5rem;">React · Next.js · LobeChat · WebSocket</div>
-        </div>
-        <div class="arch-arrow"></div>
-        <div class="arch-layer" style="border-color:var(--color-accent);background:rgba(124,77,255,0.03);">
-          <div style="font-weight:600;font-size:1.125rem;">🧠 AI Engine — AutoDNA-python</div>
-          <div class="tag tag--purple" style="margin-top:0.5rem;">Python 3.11+ · Multi-Agent LLM · Gemini API</div>
-        </div>
-        <div class="arch-arrow"></div>
-        <div class="arch-layer">
-          <div style="font-weight:600;font-size:1.125rem;">⚙️ Scheduler</div>
-          <div class="tag" style="margin-top:0.5rem;">C++17 · CMake · Modbus · Real-Time</div>
-        </div>
-        <div class="arch-arrow"></div>
-        <div class="arch-layer">
-          <div style="font-weight:600;font-size:1.125rem;">🔩 Firmware</div>
-          <div class="tag" style="margin-top:0.5rem;">C# · PLC · Hardware Control</div>
-        </div>
-      </div>
-      <div v-observe style="text-align:center;margin-top:2rem;">
-        <router-link to="/architecture" class="btn btn--secondary">Dive into Architecture →</router-link>
+        <a href="https://arxiv.org/abs/2507.02379" target="_blank" rel="noopener" class="news-card">
+          <div class="news-card__image">
+            <img src="/paper.jpg" alt="AutoDNA Paper" class="news-card__img" />
+          </div>
+          <div class="news-card__body">
+            <span class="news-card__date">July 2025</span>
+            <h3 class="news-card__title">AutoDNA Paper Published on arXiv</h3>
+            <p class="news-card__text">
+              Our paper "An AI-native experimental laboratory for autonomous biomolecular engineering"
+              is now available on arXiv. The paper presents the full AutoDNA system, experimental results,
+              and the model-experiment-instrument co-design methodology.
+            </p>
+            <span class="news-card__link">Read Paper →</span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -146,7 +134,7 @@
 const capabilities = [
   { icon:'🧬', title:'Nucleic Acid Testing', desc:'End-to-end autonomous RPA-based tests matching manual accuracy.', color:'var(--color-primary)' },
   { icon:'🔬', title:'Enzymatic DNA Synthesis', desc:'Multi-objective optimization achieving 97.7% step-wise yield.', color:'var(--color-accent)' },
-  { icon:'💾', title:'DNA Data Storage', desc:'Full read-write cycle across 9,365 hardware steps — zero manual intervention.', color:'var(--color-success)' },
+  { icon:'💾', title:'DNA Data Storage', desc:'Full read-write cycle across 11,386 hardware steps — zero manual intervention.', color:'var(--color-success)' },
   { icon:'⚡', title:'Multi-User Concurrency', desc:'Dynamic scheduling improves throughput by 3× vs conventional systems.', color:'var(--color-warning)' },
 ]
 </script>
@@ -174,23 +162,27 @@ const capabilities = [
 
 .hero__stats {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  flex-direction: row;
+  gap: 2rem;
   flex-shrink: 0;
-  min-width: 200px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 3.5rem;
+  padding-top: 10rem;
 }
 
 .stat-simple {
   text-align: center;
-  padding: 1.5rem;
+  padding: 2rem 2.5rem;
+  min-width: 180px;
 }
 
 .stat-icon {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.stat-simple .stat-value {
+  font-size: 3.5rem;
 }
 
 .hero__badge {
@@ -212,6 +204,73 @@ const capabilities = [
   flex-wrap: wrap;
 }
 
+.news-card {
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.news-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.news-card__image {
+  flex-shrink: 0;
+  width: 200px;
+  min-height: 160px;
+}
+
+.news-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-card__body {
+  flex: 1;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.news-card__date {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5rem;
+}
+
+.news-card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.news-card__text {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.news-card__link {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
 @media (max-width: 768px) {
   .hero__row {
     flex-direction: column;
@@ -224,6 +283,13 @@ const capabilities = [
   .stat-simple {
     flex: 1;
     min-width: 140px;
+  }
+  .news-card {
+    flex-direction: column;
+  }
+  .news-card__image {
+    width: 100%;
+    height: 120px;
   }
 }
 </style>
