@@ -30,7 +30,7 @@
         </div>
         <div class="card stat-simple">
           <div class="stat-icon">⚙️</div>
-          <div class="stat-value" v-count-up="{ target: 11386, comma: true }">0</div>
+          <div class="stat-value" v-count-up="{ target: 9365, comma: true }">0</div>
           <div class="card__text">Autonomous<br>Hardware Steps</div>
         </div>
       </div>
@@ -134,7 +134,7 @@
 const capabilities = [
   { icon:'🧬', title:'Nucleic Acid Testing', desc:'End-to-end autonomous RPA-based tests matching manual accuracy.', color:'var(--color-primary)' },
   { icon:'🔬', title:'Enzymatic DNA Synthesis', desc:'Multi-objective optimization achieving 97.7% step-wise yield.', color:'var(--color-accent)' },
-  { icon:'💾', title:'DNA Data Storage', desc:'Full read-write cycle across 11,386 hardware steps — zero manual intervention.', color:'var(--color-success)' },
+  { icon:'💾', title:'DNA Data Storage', desc:'Full read-write cycle across 9,365 hardware steps — zero manual intervention.', color:'var(--color-success)' },
   { icon:'⚡', title:'Multi-User Concurrency', desc:'Dynamic scheduling improves throughput by 3× vs conventional systems.', color:'var(--color-warning)' },
 ]
 </script>

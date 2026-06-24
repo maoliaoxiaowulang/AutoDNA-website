@@ -86,9 +86,9 @@
         <div>
           <span class="section-label">Application 3</span>
           <h3 style="font-size:1.75rem;margin-bottom:0.75rem;">DNA Data Storage</h3>
-          <p>End-to-end autonomous DNA data storage: encoding → synthesis → storage → sequencing → decoding. 25 instruments across 11,386 hardware steps, completing a full write-read cycle in 162.9 hours with zero manual intervention.</p>
+          <p>End-to-end autonomous DNA data storage: encoding → synthesis → storage → sequencing → decoding. 25 instruments across 9,365 hardware steps, completing a full write-read cycle in 162.9 hours with zero manual intervention.</p>
           <div style="display:flex;gap:2rem;margin-bottom:1rem;">
-            <div><div class="app-metric-value">11,386</div><div class="app-metric-label">Hardware Steps</div></div>
+            <div><div class="app-metric-value">9,365</div><div class="app-metric-label">Hardware Steps</div></div>
             <div><div class="app-metric-value">78</div><div class="app-metric-label">Strands Synthesized</div></div>
           </div>
           <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
