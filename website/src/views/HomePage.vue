@@ -53,7 +53,7 @@
       <div class="grid-3" style="margin-top:3rem;" v-observe>
         <div class="card">
           <div class="card__icon card__icon--blue">🧠</div>
-          <h3 class="card__title">AI-Native Models</h3>
+          <h3 class="card__title">Experiment-Aware Agents</h3>
           <p class="card__text">Six specialized LLM agents collaborate through natural language, autonomously designing protocols, generating hypotheses, and writing instrument control code.</p>
         </div>
         <div class="card">
@@ -63,7 +63,7 @@
         </div>
         <div class="card">
           <div class="card__icon card__icon--green">🔬</div>
-          <h3 class="card__title">Intelligent Instruments</h3>
+          <h3 class="card__title">Smart Instrument Control</h3>
           <p class="card__text">Hardware functionalities are abstracted into AI-native "atomic services," enabling agents to understand and reason about instrument capabilities.</p>
         </div>
       </div>
