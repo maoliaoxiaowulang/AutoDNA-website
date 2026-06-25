@@ -51,8 +51,3 @@ All commands should be run inside the `website/` directory.
 
 4. **One PR, one thing** — keep each PR focused on a single change to make review easy.
 
-### Rules
-
-- Do **not** commit `node_modules/` — it is already in `.gitignore`
-- Do **not** mix formatting changes with feature/content changes in the same PR
-- All files use **LF** line endings (enforced by `.gitattributes`) — no action needed on Mac/Linux; Windows users should ensure git is configured correctly
