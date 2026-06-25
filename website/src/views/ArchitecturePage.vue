@@ -1,34 +1,4 @@
 <template>
-  <header class="page-header">
-    <div class="container container--narrow">
-      <span class="section-label">System Design</span>
-      <h1>Architecture</h1>
-      <p class="section-subtitle" style="margin:0 auto;">
-        A four-layer, multi-agent architecture where AI models and laboratory hardware are co-designed from the ground up.
-      </p>
-    </div>
-  </header>
-
-  <!-- Four-Layer Diagram -->
-  <section class="section">
-    <div class="container">
-      <div v-observe style="text-align:center;margin-bottom:3rem;">
-        <span class="section-label">Layered Architecture</span>
-        <h2 class="section-title">From User Interface to Physical Hardware</h2>
-      </div>
-      <div v-observe>
-        <div v-for="(layer, i) in layers" :key="i">
-          <div class="arch-layer" :style="{borderColor: layer.color, background: layer.bg}">
-            <div style="font-weight:600;font-size:1.125rem;">{{ layer.icon }} {{ layer.name }}</div>
-            <div class="tag tag--blue" style="margin-top:0.5rem;" v-if="layer.tech">{{ layer.tech }}</div>
-            <p style="font-size:0.875rem;color:var(--color-text-secondary);margin-top:0.5rem;">{{ layer.desc }}</p>
-          </div>
-          <div class="arch-arrow" v-if="i < layers.length - 1"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Agent Architecture Diagram -->
   <section class="section">
     <div class="container">
