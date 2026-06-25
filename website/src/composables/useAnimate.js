@@ -83,7 +83,14 @@ export function useChartBar(target, initial = 10, duration = 800) {
  */
 export const vCountUp = {
   mounted(el, binding) {
-    const { target = 0, suffix = '', prefix = '', decimals = 0, comma = false, duration = 800 } = binding.value || {}
+    const {
+      target = 0,
+      suffix = '',
+      prefix = '',
+      decimals = 0,
+      comma = false,
+      duration = 800,
+    } = binding.value || {}
     let started = false
 
     function fmt(n) {

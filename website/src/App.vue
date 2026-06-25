@@ -18,8 +18,11 @@ import FooterSection from './components/shared/FooterSection.vue'
 </script>
 
 <style>
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.2s ease, transform 0.2s ease;
+.fade-enter-active,
+.fade-leave-active {
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 .fade-enter-from {
   opacity: 0;
